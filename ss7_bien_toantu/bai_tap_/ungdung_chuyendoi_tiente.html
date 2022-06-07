@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Conversion</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+
+        </tr>
+        <tr>
+            <td>
+                <input type="text" name="number" id="abc">
+
+
+
+            </td>
+            <td>
+                <select id="123">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="234">
+                    <option value="USD" >USD</option>
+                    <option value="VND">VND</option>
+                </select>
+                <td>
+                <button onclick="conver()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <span id="result"></span>
+<script>
+    function conver(){
+    let amount = document.getElementById("abc").value;
+   let fromCurrency= document.getElementById("123").value;
+   let toCurrency= document.getElementById("234").value;
+    if (fromCurrency!= toCurrency){
+    if (fromCurrency=="VND"){
+        result=parseInt(amount)/23000;
+    } else {
+        result=parseInt(amount)*23000;
+    }
+    }
+    else {
+        result=parseInt(amount);
+    }
+    document.getElementById("result").innerHTML= "Result="+ result+toCurrency;
+    }
+
+
+</script>
+
+</body>
+</html>

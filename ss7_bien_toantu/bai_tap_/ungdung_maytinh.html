@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table> <h2>Caculator</h2>
+    <tr>
+        <td >
+    <input id="sodau" placeholder="First number" type="number">
+        </td>
+        <td>
+    <input  id="socuoi" placeholder="Second number" type="number">
+        </td>
+        <td id="abc">
+            <button onclick="addition()">Addition(+)</button>
+        </td>
+        <td id="bcd">
+            <button onclick="subtraction()">Subtraction(-)</button>
+        </td>
+        <td id="zxc">
+            <button onclick="multiplication()">Multiplication(X)</button>
+        </td>
+        <td id="xcv">
+            <button onclick="division()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<span id="result"></span>
+<script>
+    function addition() {
+        let firstNumber = parseInt(document.getElementById('sodau').value);
+        let secondNumber = parseInt(document.getElementById('socuoi').value);
+        let sum = firstNumber + secondNumber;
+        document.getElementById('result').innerHTML = sum;
+    }
+    function subtraction() {
+        let numberA = parseInt(document.getElementById("sodau").value);
+        let numberB = parseInt(document.getElementById("socuoi").value);
+        let subtraction = numberA - numberB;
+        document.getElementById('result').innerHTML = subtraction;
+    }
+
+    function multiplication() {
+        let numberX = parseInt(document.getElementById('sodau').value);
+        let numberY = parseInt(document.getElementById('socuoi').value);
+        let multiplication = numberX*numberY;
+        document.getElementById('result').innerHTML = multiplication;
+    }
+    function division() {
+         let firstNumberA=document.getElementById("sodau").value;
+         let secondNumberB=document.getElementById("socuoi").value;
+         let division = firstNumberA/secondNumberB;
+        document.getElementById('result').innerHTML=division;
+    }
+</script>
+<script>
+    
+</script>
+
+</body>
+</html>
