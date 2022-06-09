@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income=parseInt(prompt('Enter income'));
+    let tax1=income*0.05;
+    let tax2=(income-5)*0.1+0.25;
+    let tax3=(income-10)*0.15+0.75;
+    let tax4=(income-18)*0.2+1.95;
+    let tax5=(income-32)*0.25+4.75;
+    let tax6=(income-52)*0.3+9.75;
+    let tax7=(income-80)*0.35+18.15;
+    if(income>80){
+        document.write('Tax money='+tax7+'trVND');
+    }else if(income>52){
+        document.write('Tax money='+tax6+'trVND');
+    }else if(income>32){
+        document.write('Tax money='+tax5+'trVND');
+    }else if(income>18){
+        document.write('Tax money='+tax4+'trVND');
+    }else if(income>10){
+        document.write('Tax money='+tax3+'trVND');
+    }else if(income>5){
+        document.write('Tax money='+tax2+'trVND');
+    }else if(income>0){
+        document.write('Tax money='+tax1+'trVND');
+    }else {
+        document.write('Not tax money');
+    }
+</script>
+
+</body>
+</html>

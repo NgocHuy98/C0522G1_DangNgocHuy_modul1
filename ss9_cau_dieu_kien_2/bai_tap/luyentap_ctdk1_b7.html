@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let time=parseInt(prompt('Enter the number of minute'));
+    let postage1=2000*time;
+    let postage2=3000*time;
+    let postage3=4000*time;
+    if(time>=20){
+        document.write('Postage payable:'+postage3);
+    } else if(time>=10){
+        document.write('Postage payable:'+postage2);
+    }else {
+        document.write('Postage payable:'+postage1);
+    }
+</script>
+
+</body>
+</html>

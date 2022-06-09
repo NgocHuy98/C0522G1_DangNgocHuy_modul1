@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberKWh = parseInt(prompt('Enter number'));
+    let level1=numberKWh*1.678;
+    let level2=(numberKWh-50)*1.734+50*1.678;
+    let level3=((numberKWh-100)*2.014+50*1.678)+50*1.734;
+if(numberKWh>=101){
+    document.write('Electricity bill:'+level3+'VND');
+}else if(numberKWh>=51){
+    document.write('Electricity bill:'+level2+'VND');
+}else if(numberKWh>0){
+    document.write('Electricity bill:'+level1+'VND');
+}else {
+    document.write('Not electricity bill:');
+}
+</script>
+
+</body>
+</html>

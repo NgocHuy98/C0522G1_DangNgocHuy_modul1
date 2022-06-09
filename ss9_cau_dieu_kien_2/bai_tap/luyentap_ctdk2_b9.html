@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA=parseInt(prompt('Enter number'));
+    let numberB=parseInt(prompt('Enter number'));
+    let numberC=parseInt(prompt('Enter number'));
+    let totalA=numberA+numberB;
+    let totalB=numberA+numberC;
+    let totalC=numberB+numberC;
+    if(numberA>0 && numberB>0 &&numberC>0){
+        if(totalA>numberC && totalB>numberB && totalC>numberA){
+            alert('This is a triangle');
+        }else {
+            alert('this is not a triangle')
+        }
+    }
+</script>
+
+</body>
+</html>
