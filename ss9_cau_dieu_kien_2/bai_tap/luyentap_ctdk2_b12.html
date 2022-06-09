@@ -6,15 +6,37 @@
 </head>
 <body>
 <script>
-    let amount=parseInt(prompt('Enter number'));
-    let month=parseInt(prompt('Enter number'));
-    let interestRate=parseInt(prompt('Enter number'));
+    let amount=parseInt(prompt('Enter the amount'));
+    let month=parseInt(prompt('Enter the number of month'));
+    let interestRate=parseFloat(prompt('Enter monthly interest rate'));
     let payInterest1 =amount*interestRate;
-    let payInterest2 =(payInterest1+amount)*
-    let payInterest3
-    let payInterest4
-    let payInterest5
-    let payInterest6
+    let payInterest2 =(payInterest1+amount)*interestRate;
+    let payInterest3 =(payInterest2+payInterest1+amount)*interestRate;
+    let payInterest4 =(payInterest3+payInterest2+payInterest1+amount)*interestRate;
+    let payInterest5 =(payInterest4+payInterest3+payInterest2+payInterest1+amount)*interestRate;
+    let payInterest6 =(payInterest5+payInterest4+payInterest3+payInterest2+payInterest1+amount)*interestRate;
+    switch (month) {
+        case 1:
+            document.write('Interest payable:' + payInterest1);
+            break;
+        case 2:
+            document.write('Interest payable:' + payInterest2);
+            break;
+        case 3:
+            document.write('Interest payable:' + payInterest3);
+            break;
+        case 4:
+            document.write('Interest payable:' + payInterest4);
+            break;
+        case 5:
+            document.write('Interest payable:' + payInterest5);
+            break;
+        case 6:
+            document.write('Interest payable:' + payInterest6);
+            break;
+     default:
+        document.write('Not calculated yet');
+    }
 </script>
 </body>
 </html>
