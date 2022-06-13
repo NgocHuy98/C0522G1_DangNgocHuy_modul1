@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let amount1=parseInt(prompt('Enter the amount'));
+    let month=parseInt(prompt('Enter the number of month'));
+    let interestRate=parseFloat(prompt('Enter monthly interest rate'));
+    let  payInterest=0;
+    let amount2=amount1;
+    for(let i=1;i<=month;i++){
+     payInterest=payInterest+amount2*interestRate;
+        amount2=amount2+payInterest;
+    }document.write(payInterest+"<br>");
+</script>
+</body>
+</html>

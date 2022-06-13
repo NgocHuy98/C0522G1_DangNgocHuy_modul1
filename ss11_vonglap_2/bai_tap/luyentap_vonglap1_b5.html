@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1=0;
+    let number2=1;
+    let nextNumber;
+    let numbers;
+    do{
+        numbers=parseInt(prompt("Enter number of Fibonacci:"));
+    }while (numbers<=2);
+    let sum=0;
+    let index=1;
+    do{
+        nextNumber=number1+number2;
+        number1=number2;
+        number2=nextNumber;
+       sum=sum+number1;
+        index++;
+    }while (index<numbers);
+    alert(sum);
+</script>
+</body>
+</html>
