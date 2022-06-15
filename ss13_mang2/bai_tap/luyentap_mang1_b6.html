@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=[];
+    let length=parseInt(prompt('Enter length'));
+    for(let i=0;i<length;i++){
+        arrayNumber[i]=parseInt(prompt('Enter element '+i));
+    }
+    let v=parseInt(prompt('Enter number v '));
+    let index=-1;
+    for(let i=0;i<arrayNumber.length;i++){
+        if (v==arrayNumber[i]){
+            index=i;
+            document.write(v +" is in the array");
+        }
+        }
+    if (index<0){
+            document.write(v + " not is in the array");
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

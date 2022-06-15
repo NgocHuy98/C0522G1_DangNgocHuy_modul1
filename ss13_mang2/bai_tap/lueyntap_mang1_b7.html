@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=[];
+    let length=parseInt(prompt('Enter length'));
+    for(let i=0;i<length;i++){
+        arrayNumber[i]=parseInt(prompt('Enter element'+i));
+    }
+    let v=parseInt(prompt('Enter number v '));
+    let index=-1;
+    for(let i=0;i<arrayNumber.length;i++){
+        if (v==arrayNumber[i]) {
+            index = i;
+        }
+    }
+        if(index!==-1) {
+            for (let i = index; i < arrayNumber.length - 1; i++) {
+                arrayNumber[i] = arrayNumber[i + 1];
+            }
+            arrayNumber[arrayNumber.length - 1] = 0;
+            document.write(arrayNumber);
+        }else {
+            document.write('Not found '+v);
+        }
+</script>
+</body>
+</html>

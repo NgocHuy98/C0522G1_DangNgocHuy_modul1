@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=[];
+    let length=parseInt(prompt('Enter length'));
+    for(let i=0;i<length;i++){
+        arrayNumber[i]=parseInt(prompt('Enter element '+i));
+    }
+    let firstArray=0;
+    let lastArray=arrayNumber.length-1;
+    while (firstArray<lastArray){
+        let middle=arrayNumber[firstArray];
+        arrayNumber[firstArray] = arrayNumber[lastArray];
+        arrayNumber[lastArray]=middle;
+        firstArray++;
+        lastArray--;
+    }
+    let result='';
+    for(let i=0;i<arrayNumber.length;i++){
+         result=result+arrayNumber[i]+' '
+    }
+    document.write(result);
+
+</script>
+</body>
+</html>

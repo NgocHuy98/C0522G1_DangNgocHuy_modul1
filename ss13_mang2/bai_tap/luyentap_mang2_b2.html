@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=[];
+    let newarraNumber=[];
+    let length=parseInt(prompt('Enter length'));
+    for(let i=0;i<length;i++){
+        arrayNumber[i]=parseInt(prompt('Enter element '+i));
+    }
+    for(let i=arrayNumber.length-1;i>=0;i--) {
+        newarraNumber.push(arrayNumber[i]);
+    }
+    for (let i=0;i<newarraNumber.length;i++) {
+        document.write(newarraNumber[i]+" ,");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let input = prompt("Enter text");
+    let english = ["apple", "banana", "cherry", "watermelon"];
+    let vietnamese = ["táo", "chuối", "sơ ri", "dưa hấu"];
+    for (let i = 0; i < english.length; i++) {
+        if (input == english[i]) {
+            alert(vietnamese[i]);
+            break;
+        }
+    }
+    if (input == english.length) {
+        alert('Not found');
+    }
+
+</script>
+</body>
+</html>

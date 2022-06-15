@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber1=[];
+    let length1=parseInt(prompt('Enter length1'));
+    for(let i=0;i<length1;i++){
+        arrayNumber1[i]=parseInt(prompt('Enter element'+i));
+    }
+    let arrayNumber2=[];
+    let length2=parseInt(prompt('Enter length2'));
+    for(let i=0;i<length2;i++){
+        arrayNumber2[i]=parseInt(prompt('Enter element'+i));
+    }
+    let arrayNumber3= new Array(arrayNumber1.length+arrayNumber2.length);
+    for (let i=0;i<arrayNumber1.length;i++){
+        arrayNumber3[i]=arrayNumber1[i];
+    }
+    for (let j=0;j<arrayNumber2.length;j++){
+        arrayNumber3[arrayNumber1.length+j]=arrayNumber2[j];
+    }
+    document.write(arrayNumber3);
+  /*  cách 2
+    let arrayNumber3 = arrayNumber1.concat(arrayNumber2); //hàm nối mảng
+    document.write(arrayNumber3);*/
+
+</script>
+
+</body>
+</html>

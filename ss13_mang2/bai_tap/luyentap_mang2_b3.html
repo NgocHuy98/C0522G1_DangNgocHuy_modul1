@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=prompt('Enter element ');
+    let newarraNumber=[];
+    let count=0;
+    for (let i = 0; i < arrayNumber.length; i++) {
+           newarraNumber = arrayNumber[i];
+    }
+    for(let i=0;i<arrayNumber.length;i++) {
+        if (arrayNumber[i] >= 0 && arrayNumber[i] <= 9) {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

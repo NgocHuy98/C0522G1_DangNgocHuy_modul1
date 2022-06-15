@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber=[];
+    let length=parseInt(prompt('Enter length'));
+    for(let i=0;i<length;i++){
+        arrayNumber[i]=parseInt(prompt('Enter element'+i));
+    }
+    let max=arrayNumber[0];
+    for(let i=0;i<arrayNumber.length;i++){
+      for( let j=i+1;j<arrayNumber.length;j++){
+      if(arrayNumber[i]<arrayNumber[j]){
+          max=arrayNumber[j];
+          arrayNumber[j]=arrayNumber[i];
+          arrayNumber[i]=max;
+      }
+      }
+    }
+    document.write(arrayNumber);
+</script>
+</body>
+</html>
