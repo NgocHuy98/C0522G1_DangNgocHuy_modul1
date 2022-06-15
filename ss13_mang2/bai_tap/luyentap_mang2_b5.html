@@ -6,16 +6,24 @@
 </head>
 <body>
 <script>
-    let arrayNumber1=[];
-    let length1=parseInt(prompt('Enter length1'));
-    for(let i=0;i<length1;i++){
-        arrayNumber1[i]=parseInt(prompt('Enter element'+i));
-    }
-    let arrayNumber2=[];
-    let length2=parseInt(prompt('Enter length2'));
-    for(let i=0;i<length2;i++){
-        arrayNumber2[i]=parseInt(prompt('Enter element'+i));
-    }
+    let count=0;
+       let array1=prompt('Enter element');
+       let array2=prompt('Enter element');
+
+        if(array1.length===array2.length) {
+         for(let i=0;i<array1.length;i++) {
+            if(array1[i]===array2[i]){
+                count++;
+            }
+        }
+            if(count===array1.length){
+                document.write('Alike');
+            }else {
+                document.write('Not alike');
+            }
+        }else {
+            document.write('Not alike');
+        }
 </script>
 </body>
 </html>

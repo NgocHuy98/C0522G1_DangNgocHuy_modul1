@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=prompt('Enter string');
+    let newArray=[];
+    for (let i=0; i<arr.length; i++){
+         newArray[i]=arr[i] ;
+    }
+    for(let i=0;i<newArray.length;i++){
+        if (newArray[i] === "-"){
+            newArray[i] = "_";
+        }
+    }
+    for(let i=0;i<newArray.length;i++){
+            document.write(newArray[i]);
+    }
+</script>
+</body>
+</html>
