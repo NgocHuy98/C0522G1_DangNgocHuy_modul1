@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function locationStar(star) {
+        let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (let i = 0; i < stars.length;i++) {
+            if (star === stars[i]) {
+                return constellations[i];
+            }
+        }
+        return false;
+    }
+    let star = prompt('Enter star name');
+    let isStar = locationStar(star);
+    if (isStar) {
+        alert(isStar);
+    } else {
+        alert('Not found');
+    }
+</script>
+</body>
+</html>

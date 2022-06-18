@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkPrime(number){
+        if(number<2){
+            return false;
+        }
+        for(let i=2;i<=Math.sqrt(number);i++){
+         if(number%i===0){
+             return false;
+         }
+        }
+        return true;
+    }
+    let prime=parseInt(prompt('Enter integer'));
+    let result=checkPrime(prime);
+    if(result){
+        document.write(prime+' is prime'+"<br>");
+    }else {
+        document.write(prime+' is not prime'+"<br>");
+    }
+     for(let i=2;i<prime;i++) {
+         if (checkPrime(i)) {
+             document.write(i + "<br>");
+         }
+     }
+ /*    let primeMin =2;
+      let count=0;
+  while (count<prime) {
+      if(checkPrime(primeMin)) {
+          count++;
+          document.write(primeMin+"<br>");
+      }
+      primeMin++;
+  }*/
+
+</script>
+
+</body>
+</html>

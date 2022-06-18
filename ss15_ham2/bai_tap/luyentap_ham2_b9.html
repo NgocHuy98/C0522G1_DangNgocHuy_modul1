@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = prompt("Enter length");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        arr[i] = prompt("Enter characters");
+    }
+    let count = 0;
+    let characters = prompt("Enter the desired character");
+
+    function findCharacters() {
+        for (let i = 0; i < arr.length; i++) {
+            if (characters == arr[i]) {
+                count=count+1;
+            }
+        }
+    }
+   findCharacters(characters);
+    if (count > 0) {
+        document.write("Count= " + count+" characters "+characters);
+    } else {
+        document.write("Not found")
+    }
+</script>
+</body>
+</html>
