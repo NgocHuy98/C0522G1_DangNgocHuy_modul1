@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ClassDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        setDay(newDay){
+            this.day= newDay;
+        }
+        setMonth(newMonth){
+            this.month= newMonth;
+        }
+        setYear(newYear){
+            this.year= newYear;
+        }
+        getDay(){
+            return this.day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        getYear(){
+            return this.year;
+        }
+    }
+    /* let MyDate = function(day, month, year) {
+
+         this.day = day;
+
+         this.month = month;
+
+         this.year = year;
+
+         this.getDay = function() {
+             return this.day;
+         }
+         this.getMonth = function() {
+             return this.month;
+         }
+         this.getYear = function() {
+             return this.year;
+         }
+         this.setDay = function(day) {
+             this.day  = day;
+         }
+         this.setMonth = function(month) {
+             this.month  = month;
+         }
+         this.setYear = function(year) {
+             this.year  = year;
+         }
+
+     };*/
+    let date = new ClassDate(2, 2, 2007);
+    date.setDay(parseInt(prompt("Enter day from 1 to 31")));
+    date.setMonth(parseInt(prompt("Enter month from 1 to 12")));
+    date.setYear(parseInt(prompt("Enter year")));
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+</script>
+</body>
+</html>

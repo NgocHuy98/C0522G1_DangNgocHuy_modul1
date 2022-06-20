@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function notPrime(number){
+            if (number >= 0&&number<2) {
+                return true;
+            }
+                for (let i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i === 0) {
+                        return true;
+                    }
+                }
+            }
+    let integer=parseInt(prompt('Enter integer'));
+    let result=notPrime(integer);
+    if(result){
+        document.write(integer+' is not prime'+"<br>"+"The number is not a small integer of "+integer+"<br>");
+    }else {
+        document.write(integer+' is prime'+"<br>"+"The number is not a small integer of "+integer+"<br>");
+    }
+    for(let i=0;i<integer;i++) {
+        if (notPrime(i)) {
+            document.write(i +"<br>");
+        }
+    }
+
+</script>
+</body>
+</html>

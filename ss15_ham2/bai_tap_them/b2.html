@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length = prompt("Enter length");
+    let arr = [];
+    for (let i = 0; i < length; i++) {
+        arr[i] = prompt("Enter characters");
+    }
+    let count = 1;
+    let arr1=arr;
+    function countCharacters() {
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i]===arr1[i]){
+                if (arr[i] == arr[i+1]) {
+                arr[i] == arr[i+1];
+                count++;
+            }else {
+                return count;
+                }
+            }
+        }
+    }
+    countCharacters(arr);
+    for(let i in arr) {
+        if (countCharacters(arr)) {
+            document.write(arr[i] + "count= " + count + "<br>");
+        }
+    }
+
+</script>
+</body>
+</html>
