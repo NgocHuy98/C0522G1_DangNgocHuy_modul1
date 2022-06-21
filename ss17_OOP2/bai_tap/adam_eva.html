@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight=weight;
+        }
+         getWeight(){
+            return this.weight;
+        }
+        isEmpty(){
+            if(this.weight<=0) {
+                document.write("is Empty");
+            }
+        }
+        decrease(){
+            if(this.isEmpty()){
+                document.write("End game");
+            }else {
+                return this.weight--;
+            }
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name=name;
+            this.gender=gender;
+            this.weight=weight;
+        }
+        setName(yourName){
+            this.name=yourName;
+        }
+        setGender(Male){
+            this.gender=Male;
+        }
+        setWeight(yourWeight){
+            this.weight=yourWeight;
+        }
+        getName(){
+            return this.name;
+        }
+        getGender(){
+            return this.gender;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        checkApple(Apple){
+            return this.weight.isEmpty();
+        }
+        eat(Apple){
+            if (this.decrease())
+            return this.weight++
+        }
+        say(String){
+            console.log("hahaha");
+        }
+    }
+    let apple=new Apple(10);
+    let human=new Human("yourname","Male","yourWeight");
+    human.setName(prompt("Enter your name"));
+    human.setGender(prompt("Enter your gender"));
+    human.setWeight(prompt("Enter weight"));
+    let nameHuman=human.getName();
+    let genderHuman=human.getGender();
+    let weightHuman=human.getWeight();
+    document.write("weight of apple: "+apple.getWeight()+"px"+"<br>");
+    document.write("name of human: "+nameHuman+"<br>");
+    document.write("gender of human: "+genderHuman+"<br>");
+    document.write("weight of human: "+weightHuman+"<br>");
+    human.checkApple();
+    human.eat();
+    human.say();
+    document.write("")
+
+</script>
+</body>
+</html>
