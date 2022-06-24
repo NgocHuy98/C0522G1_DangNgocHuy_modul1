@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+   function chooseDrink() {
+       alert("menu : 1.cafe, 2. cam vắt, 3.nước ép cà rốt,4.nước ép cà chua, 5. nước lọc, 6. nước dừa ");
+       let menu = ['cafe', 'cam vắt', 'nước ép cà rốt', 'nước ép cà chua', 'nước lọc', 'nước dừa'];
+       let num = [1, 2, 3, 4, 5, 6];
+       let price = [10, 15, 15, 25, 5, 15];
+       let sumMoney = 0;
+       let choose;
+       do {
+           let choose = parseInt(prompt("nhập số của thức uống muốn mua"));
+           if (choose === 7) {
+               break;
+           }
+           let amount = prompt("nhập số lượng");
+           sumMoney += price[num.indexOf(choose)] * amount;
+           document.write("Thức uống: " + menu[num.indexOf(choose)] + ", số lượng: " + amount + "<br>")
+
+       } while (choose)
+       document.write("Tổng tiền là " + sumMoney+"$");
+   }
+   chooseDrink();
+</script>
+</body>
+</html>

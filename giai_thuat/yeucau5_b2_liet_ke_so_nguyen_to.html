@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m=prompt("Nhập số hàng");
+    let n=prompt('Nhập số cột');
+    let arr=[];
+    for (let i=0;i<m;i++) {
+        let arr1 = []
+        for (let j = 0; j < n; j++) {
+            arr1[j] = parseInt(prompt('Enter number'));
+        }
+        arr[i]=arr1;
+    }
+    for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + "<br>");
+    }
+
+    function checkPrime(number){
+        if(number<2){
+            return false;
+        }
+        for(let i=2;i<=Math.sqrt(number);i++){
+            if(number%i===0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+</script>
+</body>
+</html>

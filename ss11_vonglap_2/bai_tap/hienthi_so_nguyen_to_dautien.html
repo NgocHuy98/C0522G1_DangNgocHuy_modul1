@@ -8,17 +8,19 @@
 <script>
     let primeNumber=2;
     let count=0;
- while (count<20){
-     let division=0;
-     for (let i=1;i <= primeNumber;i++){
-         if (primeNumber%i == 0){
+ while (count<20) {
+     let division = 0;
+     for (let i = 1; i <= primeNumber; i++) {
+         if (primeNumber % i === 0) {
              division++;
          }
-     }if(division==2){
-         document.write(primeNumber+"<br>")
+     }
+     if (division === 2) {
+         document.write(primeNumber + "<br>")
          count++;
      }
-     primeNumber++;}
+     primeNumber++;
+ }
 </script>
 </body>
 </html>

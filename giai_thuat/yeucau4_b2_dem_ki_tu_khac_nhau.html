@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let characters=prompt('Enter characters');
+    let characters1=[];
+    let count=0;
+    for(let i=0;i<characters.length;i++){
+        for (let j=0;j<characters1.length;j++){
+            if(characters[i]===characters1[j]){
+                count++;
+        }
+        }
+        if(count===0){
+            characters1.push(characters[i]);
+    }
+    }
+    document.write(characters1+"<br>"+characters1.length);
+</script>
+</body>
+</html>
