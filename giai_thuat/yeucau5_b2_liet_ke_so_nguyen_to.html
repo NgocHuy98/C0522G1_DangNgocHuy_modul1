@@ -6,33 +6,41 @@
 </head>
 <body>
 <script>
-    let m=prompt("Nhập số hàng");
-    let n=prompt('Nhập số cột');
-    let arr=[];
-    for (let i=0;i<m;i++) {
-        let arr1 = []
-        for (let j = 0; j < n; j++) {
-            arr1[j] = parseInt(prompt('Enter number'));
+    let row = prompt("nhập hàng");
+    let col = prompt("nhập cột");
+    let arr1 = [];
+    for (let i = 0; i < row; i++) {
+        let arr2 = [];
+        for (let j = 0; j < col; j++) {
+            arr2[j] = parseInt(prompt("nhập phần tử thứ: "+j+" hàng thứ "+i));
+            document.write(arr2[j] + " ")
         }
-        arr[i]=arr1;
+        arr1[i] = arr2;
+        document.write("<br>");
     }
-    for (let i = 0; i < arr.length; i++) {
-        document.write(arr[i] + "<br>");
-    }
-
-    function checkPrime(number){
-        if(number<2){
-            return false;
-        }
-        for(let i=2;i<=Math.sqrt(number);i++){
-            if(number%i===0){
-                return false;
+    function checkNumber(array) {
+        let array1 = [];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let count = 0;
+                for (let t = 1; t <= array[i][j]; t++) {
+                    if (array[i][j] % t === 0) {
+                        count++;
+                    }
+                }
+                if (count === 2) {
+                    array1.push(array[i][j]);
+                }
             }
         }
-        return true;
+        return array1;
     }
-
-
+    let arr2=checkNumber(arr1);
+    arr2.sort(function (a, b) {
+        return a - b;
+    })
+    document.write("Các số nguyên tố trong mảng: " + arr2 + "<br>");
+    document.write("Số lượng số nguyên tố trong mảng: " + arr2.length);
 </script>
 </body>
 </html>

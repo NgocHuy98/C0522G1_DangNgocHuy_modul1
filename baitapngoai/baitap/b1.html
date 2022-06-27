@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let length=parseInt(prompt("Enter length"));
+    let arr=[];
+    for (let i=0;i<length;i++){
+        arr[i]=parseInt(prompt("Enter elements "));
+    }
+    let index=0;
+    let sum=0;
+    let avg;
+    for (let i=0;i<arr.length;i+=3) {
+        if (arr[i] % 5 === 0) {
+               sum +=arr[i];
+            index++;
+        }
+    }
+     avg=sum/index;
+    document.write(avg);
+</script>
+</body>
+</html>

@@ -6,16 +6,35 @@
 </head>
 <body>
 <script>
-    let m=prompt("Nhập số hàng");
-    let n=prompt('Nhập số cột');
+    let row=prompt("Nhập số hàng");
+    let col=prompt('Nhập số cột');
     let arr=[];
-    for (let i=0;i<m;i++) {
+    for (let i=0;i<row;i++) {
         let arr1 = []
-        for (let j = 0; j < n; j++) {
+        for (let j = 0; j < col; j++) {
             arr1[j] = parseInt(prompt('Enter number'));
+            document.write(arr1[j] + " ");
         }
         arr[i]=arr1;
+        document.write("<br>")
     }
+    function checkNumber(array) {
+        let max= array[0][0];
+        let min= array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max= array[i][j];
+                }
+                if (array[i][j] < min) {
+                    min= array[i][j];
+                }
+            }
+        }
+        document.write("Max : " + max + "<br>");
+        document.write("Min : " + min);
+    }
+    checkNumber(arr);
 </script>
 </body>
 </html>

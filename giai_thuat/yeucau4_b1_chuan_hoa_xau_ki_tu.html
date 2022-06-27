@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkStr(str) {
+        let newString = '';
+        let stringA = str.toLowerCase().trim(); //chuyển chuổi đã nhập sang toàn bộ chữ thường
+        document.write("Chuỗi đang chạy: " + stringA + "<br>");
+        newString += stringA[0].toUpperCase();
+        for (let i = 1; i < stringA.length; i++) {
+            if (stringA[i] !== ' ' && stringA[i - 1] === ' ') {
+                newString += stringA[i].toUpperCase();
+            } else {
+                newString += stringA[i];
+            }
+        }
+        return newString;
+    }
+    let input = prompt("Nhập họ và tên");
+    let arr3=checkStr(input);
+    document.write('Kết quả: ' + arr3 + "<br>");
+
+
+    function findLongestWord(string) {
+        let array = [];
+        let arr1 = string.split(' ').sort(function (a, b) {
+            return b.length - a.length;
+        });
+
+        let max = arr1[0].length;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length === max) {
+                array.push(arr1[i]);
+            }
+
+        }
+        return array;
+    }
+    document.write("Từ dài nhất : "+findLongestWord(arr3).toString());
+
+
+    // for (let i = 0; i < arr1.length; i++) {
+    //     for (let j = 0; j < i; j++) {
+    //         if (arr1[i] > arr1[j]) {
+    //             let change = arr1[i];
+    //             arr1[i] = arr1[j];
+    //             arr1[j] = change;
+    //         }
+    //     }
+    // }
+
+
+
+    // function checkStr1(str1) {
+    //     let temp = "";
+    //     let arr = [];
+    //     for (let i = 0; i < str1.length; i++) {
+    //         if (str1[i] !== " ") {
+    //             temp = temp + str1[i];
+    //         }
+    //         if (str1[i + 1] === " ") {
+    //             arr.push(temp);
+    //         }
+    //     }
+    //     let maxIndex = 0;
+    //     for (let i = 1; i < arr.length; i++) {
+    //         if (arr[i].length > arr[maxIndex].length) {
+    //             maxIndex = i;
+    //         }
+    //     }
+    //     return arr[maxIndex];
+    // }
+    // document.write("kí tự dài nhất trong sâu là: " + checkStr1(input) + "<br>" + "có độ dài là: " + checkStr1(input).length)
+
+</script>
+</body>
+</html>

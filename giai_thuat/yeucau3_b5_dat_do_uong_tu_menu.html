@@ -15,13 +15,12 @@
        let choose;
        do {
            let choose = parseInt(prompt("nhập số của thức uống muốn mua"));
-           if (choose === 7) {
+           if (choose >= 7) {
                break;
            }
            let amount = prompt("nhập số lượng");
            sumMoney += price[num.indexOf(choose)] * amount;
            document.write("Thức uống: " + menu[num.indexOf(choose)] + ", số lượng: " + amount + "<br>")
-
        } while (choose)
        document.write("Tổng tiền là " + sumMoney+"$");
    }
